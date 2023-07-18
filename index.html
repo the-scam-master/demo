@@ -49,46 +49,10 @@ header nav a {
   }
 }
 
-@media (min-width: 600px) {
-  /* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) and (max-width: 991px) {
+  /* Small and medium devices (portrait tablets and large phones, 600px to 991px) */
   .hero {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .podcast-logo {
-    max-width: 300px;
-    margin-bottom: 0;
-    margin-right: 20px;
-  }
-
-  .hero-text {
-    order: 2;
-  }
-}
-
-@media (min-width: 768px) {
-  /* Medium devices (landscape tablets, 768px and up) */
-  .hero {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .podcast-logo {
-    max-width: 300px;
-    margin-bottom: 0;
-    margin-right: 20px;
-  }
-
-  .hero-text {
-    order: 2;
-  }
-}
-
-@media (min-width: 992px) {
-  /* Large devices (laptops/desktops, 992px and up) */
-  .hero {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -99,7 +63,25 @@ header nav a {
   }
 
   .hero-text {
-    order: 1;
+    order: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Large devices (laptops/desktops, 992px and up) */
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .podcast-logo {
+    max-width: 300px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .hero-text {
+    order: 2;
   }
 }
 
@@ -148,6 +130,7 @@ header nav a {
 .hero p {
   font-size: 18px;
   margin: 20px 0;
+  font-weight: bold;
 }
 
 .listen-button {
@@ -258,7 +241,6 @@ header nav a {
 .listen-button-episode:hover {
   background-color: #9C041E;
 }
-
 
 /* Social Media Section styles */
 
