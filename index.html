@@ -1,403 +1,397 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>The Scam Master</title>
+  <title>The Scam Master</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS styles */
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<!-- Add the meta tag within the head section -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    /* Typography */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
 
-<style>
-/* CSS styles */
+    /* Header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-}
+    header nav {
+      display: flex;
+      justify-content: center;
+    }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
 
-header nav {
-  display: flex;
-  justify-content: center;
-}
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 50px;
+    }
 
-header nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
+    .podcast-logo {
+      order: 1;
+    }
 
-@media (max-width: 600px) {
-  /* Extra small devices (phones, 600px and down) */
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
+    .hero-text {
+      flex: 1;
+      order: 2;
+    }
 
-  .podcast-logo {
-    max-width: 200px;
-    margin-bottom: 20px;
-  }
+    .hero h1 {
+      font-size: 48px;
+      color: #C8102E;
+      font-weight: bold;
+    }
 
-  .hero-text {
-    order: 1;
-  }
-}
+    .hero p {
+      font-size: 18px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
 
-@media (min-width: 600px) and (max-width: 991px) {
-  /* Small and medium devices (portrait tablets and large phones, 600px to 991px) */
-  .hero {
-    flex-direction: column;
-    align-items: center;
-  }
+    .listen-button {
+      background-color: #C8102E;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-  .podcast-logo {
-    max-width: 300px;
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
+    .listen-button:hover {
+      background-color: #9C041E;
+    }
 
-  .hero-text {
-    order: 2;
-  }
-}
+    /* Listen Section */
+    .listen {
+      padding: 50px;
+      text-align: center;
+    }
 
-@media (min-width: 992px) {
-  /* Large devices (laptops/desktops, 992px and up) */
-  .hero {
-    flex-direction: row;
-    align-items: center;
-  }
+    .listen h2 {
+      margin-bottom: 20px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #333;
+    }
 
-  .podcast-logo {
-    max-width: 300px;
-    margin-bottom: 0;
-    margin-right: 20px;
-  }
+    .listen-icons {
+      display: flex;
+      justify-content: center;
+    }
 
-  .hero-text {
-    order: 2;
-  }
-}
+    .listen-icons a {
+      margin: 0 20px;
+    }
 
-@media (min-width: 1200px) {
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  .hero {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
+    .listen-icons img {
+      height: 80px;
+    }
 
-  .podcast-logo {
-    max-width: 300px;
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
+    /* Episodes Section */
+    .episodes {
+      padding: 50px;
+    }
 
-  .hero-text {
-    order: 1;
-  }
-}
+    .episode-card {
+      padding: 20px;
+      margin: 20px 0;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-/* Remaining styles */
+    .episode-card h3 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #333;
+    }
 
-/* Hero Section styles */
-.hero {
-  display: flex;
-  align-items: center;
-  padding: 50px;
-}
+    .episode-card a {
+      background-color: #C8102E;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin-top: auto;
+    }
 
-.podcast-logo {
-  order: 1;
-}
+    .episode-card a:hover {
+      background-color: #9C041E;
+    }
 
-.hero-text {
-  flex: 1;
-  order: 2;
-}
+    .episode-card:hover {
+      transform: translateY(-5px);
+    }
 
-.hero h1 {
-  font-size: 48px;
-  color: #C8102E;
-  font-weight: bold;
-}
+    .listen-button-episode {
+      background-color: #C8102E;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      animation: pulse-animation 1s infinite;
+    }
 
-.hero p {
-  font-size: 18px;
-  margin: 20px 0;
-  font-weight: bold;
-}
+    .listen-button-episode:hover {
+      background-color: #9C041E;
+    }
 
-.listen-button {
-  background-color: #C8102E;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    /* Social Media Section */
+    .social-media {
+      padding: 50px;
+      text-align: center;
+      background-color: #FAF8F8;
+      color: white;
+    }
 
-.listen-button:hover {
-  background-color: #9C041E;
-}
+    .social-media h2 {
+      margin-bottom: 20px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 28px;
+      color: #000000;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
 
-/* Platforms Section styles */
+    .social-media-icons {
+      display: flex;
+      justify-content: center;
+    }
 
-.listen {
-  padding: 50px;
-  text-align: center;
-}
+    .social-media-icons a {
+      margin: 0 20px;
+    }
 
-.listen h2 {
-  margin-bottom: 20px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #333;
-}
+    .social-media-icons img {
+      height: 90px;
+    }
 
-.listen-icons {
-  display: flex;
-  justify-content: center;
-}
+    /* Footer */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      color: white;
+    }
 
-.listen-icons a {
-  margin: 0 20px;
-}
+    footer a {
+      color: #C8102E;
+      font-weight: bold;
+    }
 
-.listen-icons img {
-  height: 80px;
-}
+    /* Media Queries */
+    /* Extra small devices (phones, 600px and down) */
+    @media (max-width: 600px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
 
-/* Episodes Section styles */
+      .podcast-logo {
+        max-width: 200px;
+        margin-bottom: 20px;
+      }
 
-.episodes {
-  padding: 50px;
-}
+      .hero-text {
+        order: 1;
+      }
+    }
 
-.episode-card {
-  padding: 20px;
-  margin: 20px 0;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
+    /* Small and medium devices (portrait tablets and large phones, 600px to 991px) */
+    @media (min-width: 600px) and (max-width: 991px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+      }
 
-.episode-card h3 {
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #333;
-}
+      .podcast-logo {
+        max-width: 300px;
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
 
-.episode-card a {
-  background-color: #C8102E;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-top: auto;
-}
+      .hero-text {
+        order: 2;
+      }
+    }
 
-.episode-card a:hover {
-  background-color: #9C041E;
-}
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media (min-width: 992px) {
+      .hero {
+        flex-direction: row;
+        align-items: center;
+      }
 
-.episode-card:hover {
-  transform: translateY(-5px);
-}
+      .podcast-logo {
+        max-width: 300px;
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
 
-.listen-button-episode {
-  background-color: #C8102E;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  animation: pulse-animation 1s infinite;
-}
+      .hero-text {
+        order: 2;
+      }
+    }
 
-.listen-button-episode:hover {
-  background-color: #9C041E;
-}
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
 
-/* Social Media Section styles */
+      .podcast-logo {
+        max-width: 300px;
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
 
-.social-media {
-  padding: 50px;
-  text-align: center;
-  background-color: #FAF8F8;
-  color: white;
-}
+      .hero-text {
+        order: 1;
+      }
+    }
 
-.social-media h2 {
-  margin-bottom: 20px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 28px;
-  color : #000000;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+    /* Adjust the padding and margin for smaller screens */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
 
-.social-media-icons {
-  display: flex;
-  justify-content: center;
-}
+      .hero {
+        padding: 20px;
+      }
 
-.social-media-icons a {
-  margin: 0 20px;
-}
+      .listen {
+        padding: 20px;
+      }
 
-.social-media-icons img {
-  height: 90px;
-}
-  /* Adjust the padding and margin for smaller screens */
-@media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
+      .episodes {
+        padding: 20px;
+      }
 
-  .hero {
-    padding: 20px;
-  }
-
-  .listen {
-    padding: 20px;
-  }
-
-  .episodes {
-    padding: 20px;
-  }
-
-  .social-media {
-    padding: 20px;
-  }
-}
-
-/* Footer styles */
-
-footer {
-  padding: 20px;
-  text-align: center;
-  background-color: #333;
-  color: white;
-}
-
-footer a {
-  color: #C8102E;
-  font-weight: bold;
-}
-
-</style>
-  
+      .social-media {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Header -->
+  <header>
+    <nav class="navigation">
+      <a href="#">Home</a>
+      <a href="https://podcasters.spotify.com/pod/show/thescammaster">Profile Page</a>
+      <a href="https://asht_no.t.me/">Contact</a>
+    </nav>
+  </header>
 
-<!-- Header -->
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="podcast-logo">
+        <img src="images/podcast_logo.png" alt="Podcast" class="podcast-logo">
+      </div>
+      <div class="hero-text">
+        <h1>The Scam Master</h1>
+        <p>The podcast that exposes the tricks and traps of fraudsters and teaches you how to outwit them.</p>
+        <a href="#" class="listen-button">Listen Now</a>
+      </div>
+    </section>
 
-<header>
-  <nav class="navigation">
-    <a href="#">Home</a>
-    <a href="https://podcasters.spotify.com/pod/show/thescammaster">Profile Page</a>
-    <a href="https://asht_no.t.me/">Contact</a>
-  </nav>
-</header>
+    <!-- Listen Section -->
+    <section class="listen">
+      <h2>Listen on your Favorite Platform</h2>
+      <div class="listen-icons">
+        <a href="https://www.youtube.com/@the_scam_master/podcasts"><img src="images/youtube.png" alt="YouTube" width="80"></a>
+        <a href="https://open.spotify.com/show/0Zled4aLCnPfiZxlfdx8h3"><img src="images/spotify.png" alt="Spotify" width="80"></a>
+        <a href="https://music.amazon.co.uk/podcasts/3d740df3-2d4b-42f5-8a93-29ffa1bf7d76/the-scam-master"><img src="images/amazon-music.png" alt="Amazon Music" width="80"></a>
+        <!-- Add more platform icons as needed -->
+      </div>
+    </section>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="podcast-logo">
-    <img src="images/podcast_logo.png" alt="Podcast" class="podcast-logo">
-  </div>
-  <div class="hero-text">
-    <h1>The Scam Master</h1>
-    <p>The podcast that exposes the tricks and traps of fraudsters and teaches you how to outwit them.</p>
-    <a href="#" class="listen-button">Listen Now</a>
-  </div>
-</section>
+    <!-- Episodes Section -->
+    <section class="episodes">
+      <h2>Latest Episodes</h2>
+      <div class="episode-card">
+        <h3>Episode 6: How to Identify and Avoid Pyramid Scheme Traps</h3>
+        <a href="https://open.spotify.com/episode/6RAD3vWDB6vSYyjkQgPbLa?si=403002a7150b417d" class="listen-button-episode">Listen</a>
+      </div>
+      <div class="episode-card">
+        <h3>Episode 5: How to Spot and Avoid Online Job Scams</h3>
+        <a href="https://open.spotify.com/episode/5XCIMup4owO4La2cGpykBv?si=FeLyFAytRlit8nArbSV-Ag" class="listen-button-episode">Listen</a>
+      </div>
+      <div class="episode-card">
+        <h3>Episode 4: How to Avoid Identity Theft</h3>
+        <a href="https://open.spotify.com/episode/5uTIgNF8gKcdGKs0xkVDMa?si=9pOFjX6RS8mqbOehS7JPMA" class="listen-button-episode">Listen</a>
+      </div>
+      <div class="episode-card">
+        <h3>Episode 3: How to Spot and Avoid Investment Scams</h3>
+        <a href="https://open.spotify.com/episode/5aWexM0iGCQwP4sUVzstuH?si=d2102b4acdd74ed9" class="listen-button-episode">Listen</a>
+      </div>
+      <div class="episode-card">
+        <h3>Episode 2: Dark Side of Online Dating Scam</h3>
+        <a href="https://open.spotify.com/episode/6hvI50Jl0vuVkNFsORHOS9?si=wIb_EzFGSDih2_XrKV8aUg" class="listen-button-episode">Listen</a>
+      </div>
+      <div class="episode-card">
+        <h3>Episode 1: The Psychology of Social Engineering</h3>
+        <a href="https://open.spotify.com/episode/5kirHuIf0IUB3fgLbrHOPX?si=fp0KaFaCTjKBCbzKQT87gQ" class="listen-button-episode">Listen</a>
+      </div>
+    </section>
 
+    <!-- Social Media Section -->
+    <section class="social-media">
+      <h2>Connect with us on Social Media</h2>
+      <div class="social-media-icons">
+        <a href="https://www.instagram.com/the_scam_master/"><img src="images/instagram.png" alt="Instagram" width="90"></a>
+        <!-- Add more social media icons as needed -->
+      </div>
+    </section>
+  </main>
 
-<!-- Listen Section -->
-
-<section class="listen">
-  <h2>Listen on your Favorite Platform</h2>
-  <div class="listen-icons">
-    <a href="https://www.youtube.com/@the_scam_master/podcasts"><img src="images/youtube.png" alt="YouTube" width="80"></a>
-    <a href="https://open.spotify.com/show/0Zled4aLCnPfiZxlfdx8h3"><img src="images/spotify.png" alt="Spotify" width="80"></a>
-    <a href="https://music.amazon.co.uk/podcasts/3d740df3-2d4b-42f5-8a93-29ffa1bf7d76/the-scam-master"><img src="images/amazon-music.png" alt="Amazon Music" width="80"></a>
-    <!-- Add more platform icons as needed -->
-  </div>
-</section>
-
-<!-- Episodes Section -->
-
-<section class="episodes">
-  <h2>Latest Episodes</h2>
-  <div class="episode-card">
-    <h3>Episode 6: How to Identify and Avoid Pyramid Scheme Traps</h3>
-    <a href="https://open.spotify.com/episode/6RAD3vWDB6vSYyjkQgPbLa?si=403002a7150b417d" class="listen-button-episode">Listen</a>
-  </div>
-  <div class="episode-card">
-    <h3>Episode 5: How to Spot and Avoid Online Job Scams</h3>
-    <a href="https://open.spotify.com/episode/5XCIMup4owO4La2cGpykBv?si=FeLyFAytRlit8nArbSV-Ag" class="listen-button-episode">Listen</a>
-  </div>
-  <div class="episode-card">
-    <h3>Episode 4: How to Avoid Identity Theft</h3>
-    <a href="https://open.spotify.com/episode/5uTIgNF8gKcdGKs0xkVDMa?si=9pOFjX6RS8mqbOehS7JPMA" class="listen-button-episode">Listen</a>
-  </div>
-  <div class="episode-card">
-    <h3>Episode 3: How to Spot and Avoid Investment Scams</h3>
-    <a href="https://open.spotify.com/episode/5aWexM0iGCQwP4sUVzstuH?si=d2102b4acdd74ed9" class="listen-button-episode">Listen</a>
-  </div>
-  <div class="episode-card">
-    <h3>Episode 2: Dark Side of Online Dating Scam</h3>
-    <a href="https://open.spotify.com/episode/6hvI50Jl0vuVkNFsORHOS9?si=wIb_EzFGSDih2_XrKV8aUg" class="listen-button-episode">Listen</a>
-  </div>
-  <div class="episode-card">
-    <h3>Episode 1: The Psychology of Social Engineering</h3>
-    <a href="https://open.spotify.com/episode/5kirHuIf0IUB3fgLbrHOPX?si=fp0KaFaCTjKBCbzKQT87gQ" class="listen-button-episode">Listen</a>
-  </div>
-</section>
-
-<!-- Social Media Section -->
-
-<section class="social-media">
-  <h2>Connect with us on Social Media</h2>
-  <div class="social-media-icons">
-    <a href="https://www.instagram.com/the_scam_master/"><img src="images/instagram.png" alt="Instagram" width="90"></a>
-    <!-- Add more social media icons as needed -->
-  </div>
-</section>
-
-<!-- Footer -->
-
-<footer>
-  <p>&copy; 2023 The Scam Master. All rights reserved. <b>Website design by <a href="#">tan._.5월</a></b></p>
-</footer>
-
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 The Scam Master. All rights reserved. <b>Website design by <a href="#">tan._.5월</a></b></p>
+  </footer>
 </body>
 </html>
