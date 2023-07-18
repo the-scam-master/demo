@@ -32,39 +32,111 @@ header nav a {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  header nav {
-    justify-content: space-between;
+@media (max-width: 600px) {
+  /* Extra small devices (phones, 600px and down) */
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
 
-  #nav-home {
-    order: 3;
+  .podcast-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
   }
 
-  #nav-about {
-    order: 2;
-  }
-
-  #nav-contact {
+  .hero-text {
     order: 1;
   }
 }
 
-/* Hero Section styles */
+@media (min-width: 600px) {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
 
+  .podcast-logo {
+    max-width: 300px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Medium devices (landscape tablets, 768px and up) */
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .podcast-logo {
+    max-width: 300px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Large devices (laptops/desktops, 992px and up) */
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .podcast-logo {
+    max-width: 300px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .podcast-logo {
+    max-width: 300px;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+}
+
+/* Remaining styles */
+
+/* Hero Section styles */
 .hero {
   display: flex;
   align-items: center;
   padding: 50px;
 }
 
+.podcast-logo {
+  order: 1;
+}
+
 .hero-text {
   flex: 1;
   order: 2;
-}
-.podcast-logo {
-  max-width: 300px;
-  order: 1;
 }
 
 .hero h1 {
@@ -195,34 +267,6 @@ footer {
 footer a {
   color: #C8102E;
   font-weight: bold;
-}
-
-/* Responsive Adjustments */
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .podcast-logo {
-    max-width: 200px;
-    margin-bottom: 20px;
-  }
-  .hero-text {
-    order: 1;
-  }
-  .listen-icons a {
-    margin: 10px;
-  }
-  .listen-icons img {
-    height: 60px;
-  }
-  .episodes {
-    padding: 20px;
-  }
-  .episode-card {
-    margin: 10px 0;
-  }
 }
 
 </style>
