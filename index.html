@@ -183,69 +183,68 @@ header nav a {
   height: 80px;
 }
 
-/* Episodes Section styles */
-
-.episodes {
-  padding: 50px;
-  text-align: center;
-}
-
-.episode-card {
-  padding: 20px;
-  margin: 20px 0;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.episode-card h3 {
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #333;
-}
-
-.episode-card a {
-  background-color: #C8102E;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-top: auto;
-}
-
-.episode-card a:hover {
-  background-color: #9C041E;
-}
-
-.episode-card:hover {
-  transform: translateY(-5px);
-}
-
-.listen-button-episode {
-  background-color: #C8102E;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  animation: pulse-animation 1s infinite;
-}
-
-.listen-button-episode:hover {
-  background-color: #9C041E;
-}
+    /* Episodes section */
+    .episodes {
+      background-color: #fff;
+      color: #000;
+      padding: 50px;
+      text-align: center;
+    }
+    
+    .episodes h2 {
+      font-size: 32px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: underline #fd5c63;
+    }
+    
+    /* Add or modify styles in your existing CSS */
+    .episode-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .episode-card {
+      background-color: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, background-color 0.2s;
+      text-align: center;
+    }
+    
+    .episode-card:hover {
+      transform: scale(1.05);
+      background-color: #e0e0e0;
+    }
+    
+    .episode-card h3 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #333;
+    }
+    
+    .episode-card p {
+      font-size: 16px;
+      color: #666;
+    }
+    
+    .episode-card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #fd5c63;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    
+    .episode-card a:hover {
+      color: #ff0000;
+    }
 
 /* Social Media Section styles */
 
@@ -376,34 +375,80 @@ footer a {
 
 <section class="episodes">
   <h2>Latest Episodes</h2>
+<div class="episode-cards-container">
+  <!-- Episode 1 -->
   <div class="episode-card">
-    <h3>Episode 7: How to Spot and Avoid Fake online Store</h3>
-    <a href="https://open.spotify.com/episode/0BnWuMUAj82b6HIYRSy8oD?si=TUw8iyOuQ-2K3XfGq-6GWQ" class="listen-button-episode">Listen</a>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1t3R4M5zrmvaPfg8Biyg2p?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/1t3R4M5zrmvaPfg8Biyg2p?si=STsreAvIS66-D42c5oe9_g">Listen on Spotify</a>
   </div>
+  
+  <!-- Episode 2 -->
   <div class="episode-card">
-    <h3>Episode 6: How to Identify and Avoid Pyramid Scheme Traps</h3>
-    <a href="https://open.spotify.com/episode/6RAD3vWDB6vSYyjkQgPbLa?si=403002a7150b417d" class="listen-button-episode">Listen</a>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/3BPeu8AxXgZ0TlEOlSNFhb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/3BPeu8AxXgZ0TlEOlSNFhb?si=t1yckocBT4mZNrF0P21nFg">Listen on Spotify</a>
   </div>
+  
+  <!-- Episode 3 -->
   <div class="episode-card">
-    <h3>Episode 5: How to Spot and Avoid Online Job Scams</h3>
-    <a href="https://open.spotify.com/episode/5XCIMup4owO4La2cGpykBv?si=FeLyFAytRlit8nArbSV-Ag" class="listen-button-episode">Listen</a>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0aEE9ErAsJN5FP2TTv0IPA?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/0aEE9ErAsJN5FP2TTv0IPA?si=KrbIYCTyRZ6GPG2itgGsvA">Listen on Spotify</a>
   </div>
+  
+  <!-- Episode 4 -->
   <div class="episode-card">
-    <h3>Episode 4: How to Avoid Identity Theft</h3>
-    <a href="https://open.spotify.com/episode/5uTIgNF8gKcdGKs0xkVDMa?si=9pOFjX6RS8mqbOehS7JPMA" class="listen-button-episode">Listen</a>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1eBIB6EpsOdNaSauzALex9?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/1eBIB6EpsOdNaSauzALex9?si=_fKoAprFRUCTXcZNButPBA">Listen on Spotify</a>
   </div>
+  
+  <!-- Episode 5 -->
   <div class="episode-card">
-    <h3>Episode 3: How to Spot and Avoid Investment Scams</h3>
-    <a href="https://open.spotify.com/episode/5aWexM0iGCQwP4sUVzstuH?si=d2102b4acdd74ed9" class="listen-button-episode">Listen</a>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1vXQ2SAdCYFuBsV3oRqweQ?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/1vXQ2SAdCYFuBsV3oRqweQ?si=LC6iyxo6TdecvLheP2Zw3A">Listen on Spotify</a>
   </div>
+  
+  <!-- Episode 6 -->
   <div class="episode-card">
-    <h3>Episode 2: Dark Side of Online Dating Scam</h3>
-    <a href="https://open.spotify.com/episode/6hvI50Jl0vuVkNFsORHOS9?si=wIb_EzFGSDih2_XrKV8aUg" class="listen-button-episode">Listen</a>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0BnWuMUAj82b6HIYRSy8oD?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/0BnWuMUAj82b6HIYRSy8oD?si=dJRDItpoR42e9r2vosa5vA">Listen on Spotify</a>
   </div>
+  
+  <!-- Episode 7 -->
   <div class="episode-card">
-    <h3>Episode 1: The Psychology of Social Engineering</h3>
-    <a href="https://open.spotify.com/episode/5kirHuIf0IUB3fgLbrHOPX?si=fp0KaFaCTjKBCbzKQT87gQ" class="listen-button-episode">Listen</a>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6RAD3vWDB6vSYyjkQgPbLa?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/6RAD3vWDB6vSYyjkQgPbLa?si=403002a7150b417d">Listen on Spotify</a>
   </div>
+  
+  <!-- Episode 8 -->
+  <div class="episode-card">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5XCIMup4owO4La2cGpykBv?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/5XCIMup4owO4La2cGpykBv?si=FeLyFAytRlit8nArbSV-Ag">Listen on Spotify</a>
+  </div>
+  
+  <!-- Episode 9 -->
+  <div class="episode-card">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5uTIgNF8gKcdGKs0xkVDMa?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/5uTIgNF8gKcdGKs0xkVDMa?si=9pOFjX6RS8mqbOehS7JPMA">Listen on Spotify</a>
+  </div>
+  
+  <!-- Episode 10 -->
+  <div class="episode-card">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5aWexM0iGCQwP4sUVzstuH?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/5aWexM0iGCQwP4sUVzstuH?si=d2102b4acdd74ed9">Listen on Spotify</a>
+  </div>
+  
+  <!-- Episode 11 -->
+  <div class="episode-card">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6hvI50Jl0vuVkNFsORHOS9?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/6hvI50Jl0vuVkNFsORHOS9?si=wIb_EzFGSDih2_XrKV8aUg">Listen on Spotify</a>
+  </div>
+  
+  <!-- Episode 12 -->
+  <div class="episode-card">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5kirHuIf0IUB3fgLbrHOPX?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <a href="https://open.spotify.com/episode/5kirHuIf0IUB3fgLbrHOPX?si=fp0KaFaCTjKBCbzKQT87gQ">Listen on Spotify</a>
+  </div>
+</div>
+
 </section>
 
 <!-- Social Media Section -->
